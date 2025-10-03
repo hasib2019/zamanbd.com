@@ -1,6 +1,10 @@
 @extends('backend.layouts.app')
 
 @section('content')
+    @php
+        CoreComponentRepository::instantiateShopRepository();
+        CoreComponentRepository::initializeCache();
+    @endphp
 
     <div class="aiz-titlebar text-left mt-2 mb-3">
         <div class="row align-items-center">
